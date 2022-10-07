@@ -1,1 +1,18 @@
 // app global css in SCSS form
+@font-face {
+  font-family: beleren;
+  src: url(../assets/Beleren2016-Bold.woff);
+}
+
+.beleren {
+  font-family: "beleren";
+}
+
+@font-face {
+  font-family: mtg;
+  src: url(../assets/MTG.ttf);
+}
+
+.card-text {
+  font-family: "mtg";
+}
