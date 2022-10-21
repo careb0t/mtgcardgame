@@ -3,9 +3,6 @@
     <q-header class="text-white transparent">
       <q-toolbar>
         <q-toolbar-title class="beleren"> Tibalt and Tamiyo </q-toolbar-title>
-        <q-space />
-        <span class="subtitle beleren">Classic</span>
-        <span class="subtitle beleren">Commanders</span>
       </q-toolbar>
     </q-header>
 
@@ -35,6 +32,12 @@ export default defineComponent({
 });
 </script>
 <style>
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
 .bg-image {
   background-image: url(../assets/mountain.jpg);
   background-repeat: no-repeat;
