@@ -2,8 +2,8 @@
   <q-page class="flex flex-center vertical-top column beleren">
     <img
       alt="Card of the day"
-      src="~assets/card_back.png"
-      style="width: 200px"
+      :src="answerImage()"
+      style="width: 350px"
       class="card"
     />
     <div class="chance-container">
@@ -74,6 +74,8 @@
           <q-td
             :props="props"
             :style="{ backgroundColor: nameMatch(props.value) }"
+            @mouseover="hoverImage(props.value)"
+            @mouseout="clearHoverImage()"
           >
             {{ props.value }}
           </q-td>
@@ -118,7 +120,10 @@
             :style="{ backgroundColor: subtypeMatch(props.value) }"
           >
             <template v-for="subtype in props.value" :key="subtype">
-              <q-badge class="table-badge" color="black">
+              <q-badge
+                class="table-badge"
+                :style="{ backgroundColor: subtypeBadgeMatch(subtype) }"
+              >
                 {{ subtype }}
               </q-badge>
             </template>
@@ -150,6 +155,11 @@
         </template>
       </q-table>
     </div>
+    <img
+      :src="hoveredImage"
+      class="hover-image"
+      :class="[isHovered ? 'hoveredImg' : 'unhoveredImg']"
+    />
   </q-page>
   <q-icon
     name="help_outline"
@@ -223,6 +233,7 @@
 </template>
 
 <script>
+import axios from "src/boot/axios";
 import { defineComponent, ref, onMounted } from "vue";
 import cardList from "../assets/commander_cards.json";
 
@@ -274,11 +285,12 @@ export default defineComponent({
     const options = ref(cardNames);
     const guesses = ref([]);
     const answer = ref(
-      cardList.find((card) => card.name === "Breya, Etherium Shaper")
+      cardList.find((card) => card.name === "Lord Xander, the Collector")
     );
     const chances = ref(5);
     const status = ref(null);
     const helpMenuOpen = ref(false);
+    const hoveredImage = ref(null);
     return {
       selectedCard: ref(null),
       options,
@@ -288,6 +300,7 @@ export default defineComponent({
       chances,
       status,
       helpMenuOpen,
+      hoveredImage,
 
       filterFn(val, update, abort) {
         if (val.length < 2) {
@@ -343,10 +356,8 @@ export default defineComponent({
           console.log("full match");
           return "#66ff66";
         } else if (matchCount > 0) {
-          console.log("partial match");
           return "#ffff99";
         } else {
-          console.log("no match");
           return "#ff6666";
         }
       },
@@ -379,6 +390,14 @@ export default defineComponent({
         }
       },
 
+      subtypeBadgeMatch(subtype) {
+        if (answer.value.subtypes.includes(subtype)) {
+          return "#006609";
+        } else {
+          return "#820713";
+        }
+      },
+
       powerMatch(power) {
         if (power === answer.value.power) {
           return "#66ff66";
@@ -399,6 +418,41 @@ export default defineComponent({
         console.log("toggle help");
         helpMenuOpen.value = !helpMenuOpen.value;
       },
+
+      getImage(cardName, size) {
+        if (hoveredImage.value == null) {
+          let chosenCard = cardList.find((card) => card.name === cardName);
+          let imageId = chosenCard.identifiers.scryfallId;
+          let url = `https://api.scryfall.com/cards/${imageId}?format=image&version=${size}`;
+
+          return url;
+        } else return null;
+      },
+
+      hoverImage(cardName) {
+        console.log(cardName);
+        hoveredImage.value = this.getImage(cardName, "border_crop");
+      },
+
+      clearHoverImage() {
+        hoveredImage.value = null;
+      },
+
+      isHovered() {
+        if (hoveredImage.value == null) {
+          return false;
+        } else return true;
+      },
+
+      answerImage() {
+        let chosenCard = cardList.find(
+          (card) => card.name === answer.value.name
+        );
+        let imageId = chosenCard.identifiers.scryfallId;
+        let url = `https://api.scryfall.com/cards/${imageId}?format=image&version=art_crop`;
+
+        return url;
+      },
     };
   },
 });
@@ -410,6 +464,7 @@ export default defineComponent({
 
 .card {
   margin: 10px 0 30px 0;
+  width: 500px;
 }
 
 .chance-container {
@@ -480,6 +535,22 @@ export default defineComponent({
 
 .table-badge {
   margin: 0 3px;
+}
+
+.hover-image {
+  position: absolute;
+  max-height: 300px;
+  z-index: 8;
+  top: 50vh;
+  left: 30vh;
+}
+
+.hoveredImg {
+  display: inline-flex;
+}
+
+.unhoveredImg {
+  display: none;
 }
 
 .mana-icon {
