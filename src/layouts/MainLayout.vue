@@ -1,12 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="text-white transparent">
-      <q-toolbar>
-        <q-toolbar-title class="beleren"> Tibalt and Tamiyo </q-toolbar-title>
-      </q-toolbar>
-    </q-header>
-
-    <q-page-container class="bg-image">
+    <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
@@ -36,15 +30,6 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-}
-
-.bg-image {
-  background-image: url(../assets/mountain.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.subtitle {
-  margin-left: 50px;
+  overflow: hidden;
 }
 </style>
