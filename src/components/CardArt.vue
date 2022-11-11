@@ -40,7 +40,7 @@ export default defineComponent({
 .card {
   margin: 10px 0 30px 0;
   height: 229px;
-  width: 313px;
+  width: 312px;
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
