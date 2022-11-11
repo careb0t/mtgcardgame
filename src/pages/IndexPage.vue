@@ -5,6 +5,7 @@
     :class="{
       introFinished: timer <= 1,
     }"
+    :style="timer == 0 ? 'background-size: cover;' : ''"
   >
     <q-toolbar :class="{ chidden: !introFinished() }" class="comp">
       <q-toolbar-title class="beleren title">
@@ -162,7 +163,6 @@ export default defineComponent({
   overflow: hidden;
   background-image: url(../assets/mountain.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-size: 400%;
   background-position: center;
   transition: all 1s linear;
