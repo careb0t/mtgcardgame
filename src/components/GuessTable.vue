@@ -179,7 +179,6 @@ export default defineComponent({
           answerColors.length === colors.length &&
           matchCount === colors.length
         ) {
-          console.log("full match");
           return "#66ff66";
         } else if (matchCount > 0) {
           return "#ffff99";
@@ -242,7 +241,6 @@ export default defineComponent({
 
       hoverImage(cardName) {
         hoveredImage.value = cardList.find((card) => card.name === cardName);
-        console.log(hoveredImage.value);
       },
 
       clearHoverImage() {

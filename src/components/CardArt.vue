@@ -1,10 +1,12 @@
 <template>
-  <img
-    alt="Card of the day"
-    :src="getArt()"
-    style="width: 350px"
-    class="card"
-  />
+  <div class="card" :style="{ backgroundImage: `url(${getArt()})` }">
+    <div class="box" :class="isHidden(1) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(2) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(3) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(4) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(5) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(6) ? 'bHidden' : ''"></div>
+  </div>
 </template>
 
 <script>
@@ -12,7 +14,8 @@ import { defineComponent, ref, onMounted } from "vue";
 
 export default defineComponent({
   name: "CardArt",
-  props: ["answer", "chances", "status"],
+  props: ["answer", "chances", "status", "hiddenTiles"],
+
   setup(props) {
     return {
       getArt() {
@@ -21,6 +24,14 @@ export default defineComponent({
 
         return url;
       },
+
+      isHidden(num) {
+        if (props.hiddenTiles.includes(num)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
     };
   },
 });
@@ -28,6 +39,23 @@ export default defineComponent({
 <style>
 .card {
   margin: 10px 0 30px 0;
-  width: 500px;
+  height: 229px;
+  width: 313px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 1);
+}
+
+.box {
+  flex: 1 33%;
+  background-color: black;
+  opacity: 1;
+}
+
+.bHidden {
+  opacity: 0;
+  transition: all 2s linear;
 }
 </style>

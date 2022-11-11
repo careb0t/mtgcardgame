@@ -56,7 +56,6 @@ export default defineComponent({
       helpMenuOpen,
 
       toggleHelp() {
-        console.log("toggle help");
         helpMenuOpen.value = !helpMenuOpen.value;
       },
     };

@@ -15,6 +15,7 @@
       :answer="answer"
       :chances="chances"
       :status="status"
+      :hiddenTiles="hiddenTiles"
       :class="{ chidden: !introFinished() }"
       class="comp"
     />
@@ -28,9 +29,11 @@
       :answer="answer"
       :guesses="guesses"
       :chances="chances"
+      :hiddenTiles="hiddenTiles"
       @makeGuess="makeG($event)"
       @updateStatus="updateS($event)"
       @updateChances="updateC($event)"
+      @updateHiddenTiles="updateT($event)"
       :class="{ chidden: !introFinished() }"
       class="comp"
     />
@@ -78,7 +81,6 @@ export default defineComponent({
   },
   setup() {
     onMounted(() => {
-      console.log("counting down");
       let interval = setInterval(() => {
         if (timer.value === 0) {
           clearInterval(interval);
@@ -95,6 +97,7 @@ export default defineComponent({
     const chances = ref(5);
     const status = ref(null);
     const timer = ref(2);
+    const hiddenTiles = ref([]);
 
     return {
       guesses,
@@ -102,6 +105,7 @@ export default defineComponent({
       chances,
       status,
       timer,
+      hiddenTiles,
 
       makeG(card) {
         guesses.value.push(card);
@@ -113,6 +117,12 @@ export default defineComponent({
 
       updateS(str) {
         status.value = str;
+
+        hiddenTiles.value = [1, 2, 3, 4, 5, 6];
+      },
+
+      updateT(num) {
+        hiddenTiles.value.push(num);
       },
 
       introFinished() {

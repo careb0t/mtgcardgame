@@ -16,6 +16,7 @@
 
 <script>
 import { defineComponent, ref, onMounted } from "vue";
+import { useQuasar } from "quasar";
 import SmokeCover from "./SmokeCover.vue";
 
 export default defineComponent({
@@ -23,6 +24,7 @@ export default defineComponent({
   props: ["status", "answer", "chances"],
   components: { SmokeCover },
   setup(props) {
+    const notify = useQuasar().notify;
     return {
       returnResults() {
         this.$emit("updateStatus", "postgame");
@@ -38,10 +40,15 @@ export default defineComponent({
         navigator.clipboard.writeText(
           `Tibalt & Tamiyo\n${this.createScore()}\nhttps://tibaltandtamiyo.com`
         );
+        notify({
+          message: "Score copied to clipboard!",
+          color: "positive",
+          position: "bottom",
+          timeout: 2000,
+        });
       },
 
       createScore() {
-        console.log(props.chances);
         if (props.chances == 4) {
           return "🧙‍♂️🎴 🟩⬛⬛⬛⬛";
         } else if (props.chances == 3) {

@@ -34,7 +34,7 @@ const cardNames = cardList.map((card) => card.name);
 
 export default defineComponent({
   name: "SearchCard",
-  props: ["status", "answer", "chances"],
+  props: ["status", "answer", "chances", "hiddenTiles"],
   setup(props) {
     const newCard = ref(null);
     const options = ref(cardNames);
@@ -59,7 +59,7 @@ export default defineComponent({
       makeGuess(name) {
         const card = cardList.find((card) => card.name === name);
         let imageId = card.identifiers.scryfallId;
-        let url = `https://api.scryfall.com/cards/${imageId}?format=image&version=normal`;
+        let url = `https://api.scryfall.com/cards/${imageId}?format=image&version=border_crop`;
         card.imageUrl = url;
         this.$emit("makeGuess", card);
         if (name === props.answer.name) {
@@ -70,6 +70,17 @@ export default defineComponent({
           this.$emit("updateChances", props.chances - 1);
         } else {
           this.$emit("updateChances", props.chances - 1);
+        }
+
+        this.randomCheck(Math.floor(Math.random() * 6) + 1);
+      },
+
+      randomCheck(num) {
+        if (props.hiddenTiles.includes(num)) {
+          let randomNum = Math.floor(Math.random() * 6) + 1;
+          return this.randomCheck(randomNum);
+        } else {
+          this.$emit("updateHiddenTiles", num);
         }
       },
     };
