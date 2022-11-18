@@ -1,5 +1,4 @@
 <template>
-  <SmokeCover :class="{ hidden: introFinished() }" />
   <q-page
     class="content flex flex-center vertical-top column beleren"
     :class="{
@@ -8,9 +7,7 @@
     :style="timer == 0 ? 'background-size: cover;' : ''"
   >
     <q-toolbar :class="{ chidden: !introFinished() }" class="comp">
-      <q-toolbar-title class="beleren title">
-        Tibalt and Tamiyo
-      </q-toolbar-title>
+      <q-toolbar-title class="beleren title"> Commandle </q-toolbar-title>
     </q-toolbar>
     <CardArt
       :answer="answer"
@@ -67,7 +64,6 @@ import SearchCard from "src/components/SearchCard.vue";
 import GuessTable from "src/components/GuessTable.vue";
 import HelpPage from "src/components/HelpPage.vue";
 import WinLose from "src/components/WinLose.vue";
-import SmokeCover from "src/components/SmokeCover.vue";
 
 export default defineComponent({
   name: "IndexPage",
@@ -78,7 +74,6 @@ export default defineComponent({
     GuessTable,
     HelpPage,
     WinLose,
-    SmokeCover,
   },
   setup() {
     onMounted(() => {
@@ -93,7 +88,7 @@ export default defineComponent({
 
     const guesses = ref([]);
     const answer = ref(
-      cardList.find((card) => card.name === "Lord Xander, the Collector")
+      cardList.find((card) => card.name === "Alexander Clamilton")
     );
     const chances = ref(5);
     const status = ref(null);
@@ -158,9 +153,8 @@ export default defineComponent({
 }
 
 .content {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
   background-image: url(../assets/mountain.jpg);
   background-repeat: no-repeat;
   background-size: 400%;

@@ -75,6 +75,7 @@ export default defineComponent({
   left: 0;
   height: 100%;
   width: 100%;
+  display: none;
   z-index: -1;
   color: white;
   background-color: black;
@@ -112,6 +113,7 @@ export default defineComponent({
 
 .darken {
   background-color: rgba(0, 0, 0, 0.9);
+  display: inline-block;
   z-index: 10;
 }
 </style>

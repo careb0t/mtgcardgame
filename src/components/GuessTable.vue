@@ -253,7 +253,7 @@ export default defineComponent({
 <style>
 .my-table {
   margin: 50px 0 50px 0;
-  min-width: 45vw;
+  max-width: 80vw;
 }
 
 .q-table__container {
@@ -262,6 +262,7 @@ export default defineComponent({
 
 .card-thumbnail {
   position: absolute;
+  display: none;
   max-height: 300px;
   bottom: -680px;
   left: 10vw;
@@ -273,6 +274,7 @@ export default defineComponent({
   bottom: 20px;
   left: 10vw;
   transform: rotate(0deg);
+  display: inline;
 }
 
 .table-badge {

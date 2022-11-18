@@ -38,7 +38,7 @@ export default defineComponent({
 
       copyScore() {
         navigator.clipboard.writeText(
-          `Tibalt & Tamiyo\n${this.createScore()}\nhttps://tibaltandtamiyo.com`
+          `Tibalt & Tamiyo\n${this.createScore()}\nhttps://commandle.io`
         );
         notify({
           message: "Score copied to clipboard!",
@@ -76,6 +76,7 @@ h5 {
 
 .spotlight-bg {
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   height: 100%;
@@ -88,6 +89,7 @@ h5 {
 
 .darken {
   background-color: rgba(0, 0, 0, 0.99);
+  display: flex;
   z-index: 10;
   opacity: 1;
 }

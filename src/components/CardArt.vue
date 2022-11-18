@@ -41,6 +41,8 @@ export default defineComponent({
   margin: 10px 0 30px 0;
   height: 229px;
   width: 312px;
+  max-width: 85vw;
+  max-height: 30vh;
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;

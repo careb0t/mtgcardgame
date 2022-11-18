@@ -28,8 +28,7 @@ export default defineComponent({
 <style>
 html,
 body {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 </style>

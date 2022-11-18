@@ -42,6 +42,7 @@ export default defineComponent({
 <style>
 .chance-container {
   margin-bottom: 30px;
+  max-height: 15vh;
 }
 
 .energy-counter {
