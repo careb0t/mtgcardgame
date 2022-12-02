@@ -38,7 +38,7 @@ export default defineComponent({
 
       copyScore() {
         navigator.clipboard.writeText(
-          `Tibalt & Tamiyo\n${this.createScore()}\nhttps://commandle.io`
+          `Commandle\n${this.createScore()}\nhttps://commandle.io`
         );
         notify({
           message: "Score copied to clipboard!",

@@ -11,7 +11,7 @@
     :class="{ darken: helpMenuOpen == true }"
     @click="toggleHelp()"
   >
-    <h4>Welcome to Tibalt & Tamiyo</h4>
+    <h4>Welcome to Comandle</h4>
     <div class="rules-card flex flex-center">
       <p>
         Every day a new Commander is chosen at random from the list of all
