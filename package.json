@@ -13,7 +13,11 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@stencil/core": "^2.20.0",
     "axios": "^0.21.1",
+    "node-gyp": "^9.3.0",
+    "python": "^0.0.4",
+    "python-shell": "^3.0.1",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"

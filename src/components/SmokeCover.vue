@@ -31,7 +31,7 @@ export default defineComponent({
   pointer-events: none;
 }
 .fogwrapper {
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   width: 100%;

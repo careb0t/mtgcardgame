@@ -1,0 +1,66 @@
+Date : 2022-12-08 12:27:24
+Directory : d:\Documents\GitHub\mtgcardgame
+Total : 27 files,  11293 codes, 211 comments, 207 blanks, all 11711 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          3 |      9,748 |         31 |          1 |      9,780 |
+| Vue                |         12 |      1,279 |          0 |        108 |      1,387 |
+| JavaScript         |          6 |        151 |        154 |         72 |        377 |
+| HTML               |          1 |         42 |          1 |          3 |         46 |
+| Markdown           |          1 |         30 |          0 |         12 |         42 |
+| SCSS               |          2 |         23 |         11 |         11 |         45 |
+| XML                |          1 |         15 |          0 |          0 |         15 |
+| JSON with Comments |          1 |          5 |         14 |          0 |         19 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                   |         27 |     11,293 |        211 |        207 |     11,711 |
+| src                                                                 |         19 |      1,354 |         35 |        135 |      1,524 |
+| src\assets                                                          |          2 |         16 |          0 |          0 |         16 |
+| src\boot                                                            |          1 |          8 |         11 |          6 |         25 |
+| src\components                                                      |          8 |      1,052 |          0 |         75 |      1,127 |
+| src\css                                                             |          2 |         23 |         11 |         11 |         45 |
+| src\layouts                                                         |          1 |         29 |          0 |          6 |         35 |
+| src\pages                                                           |          2 |        189 |          0 |         24 |        213 |
+| src\router                                                          |          2 |         28 |         13 |         10 |         51 |
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                            | language           | code       | comment    | blank      | total      |
++---------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| d:\Documents\GitHub\mtgcardgame\.eslintrc.js                        | JavaScript         |         34 |         20 |         13 |         67 |
+| d:\Documents\GitHub\mtgcardgame\README.md                           | Markdown           |         30 |          0 |         12 |         42 |
+| d:\Documents\GitHub\mtgcardgame\index.html                          | HTML               |         42 |          1 |          3 |         46 |
+| d:\Documents\GitHub\mtgcardgame\jsconfig.json                       | JSON with Comments |          5 |         14 |          0 |         19 |
+| d:\Documents\GitHub\mtgcardgame\package-lock.json                   | JSON               |      9,737 |          0 |          1 |      9,738 |
+| d:\Documents\GitHub\mtgcardgame\package.json                        | JSON               |         10 |         31 |          0 |         41 |
+| d:\Documents\GitHub\mtgcardgame\postcss.config.js                   | JavaScript         |         16 |          9 |          3 |         28 |
+| d:\Documents\GitHub\mtgcardgame\quasar.config.js                    | JavaScript         |         65 |        101 |         40 |        206 |
+| d:\Documents\GitHub\mtgcardgame\src\App.vue                         | Vue                |          9 |          0 |          3 |         12 |
+| d:\Documents\GitHub\mtgcardgame\src\assets\commander_cards.json     | JSON               |          1 |          0 |          0 |          1 |
+| d:\Documents\GitHub\mtgcardgame\src\assets\quasar-logo-vertical.svg | XML                |         15 |          0 |          0 |         15 |
+| d:\Documents\GitHub\mtgcardgame\src\boot\axios.js                   | JavaScript         |          8 |         11 |          6 |         25 |
+| d:\Documents\GitHub\mtgcardgame\src\components\CardArt.vue          | Vue                |         56 |          0 |          8 |         64 |
+| d:\Documents\GitHub\mtgcardgame\src\components\ChancesCounter.vue   | Vue                |         53 |          0 |          5 |         58 |
+| d:\Documents\GitHub\mtgcardgame\src\components\GuessTable.vue       | Vue                |        277 |          0 |         24 |        301 |
+| d:\Documents\GitHub\mtgcardgame\src\components\HelpPage.vue         | Vue                |        108 |          0 |         12 |        120 |
+| d:\Documents\GitHub\mtgcardgame\src\components\SearchCard.vue       | Vue                |         91 |          0 |          9 |        100 |
+| d:\Documents\GitHub\mtgcardgame\src\components\SmokeCover.vue       | Vue                |        354 |          0 |          6 |        360 |
+| d:\Documents\GitHub\mtgcardgame\src\components\TibaltTamiyo.vue     | Vue                |         18 |          0 |          1 |         19 |
+| d:\Documents\GitHub\mtgcardgame\src\components\WinLose.vue          | Vue                |         95 |          0 |         10 |        105 |
+| d:\Documents\GitHub\mtgcardgame\src\css\app.scss                    | SCSS               |         14 |          1 |          4 |         19 |
+| d:\Documents\GitHub\mtgcardgame\src\css\quasar.variables.scss       | SCSS               |          9 |         10 |          7 |         26 |
+| d:\Documents\GitHub\mtgcardgame\src\layouts\MainLayout.vue          | Vue                |         29 |          0 |          6 |         35 |
+| d:\Documents\GitHub\mtgcardgame\src\pages\ErrorNotFound.vue         | Vue                |         27 |          0 |          5 |         32 |
+| d:\Documents\GitHub\mtgcardgame\src\pages\IndexPage.vue             | Vue                |        162 |          0 |         19 |        181 |
+| d:\Documents\GitHub\mtgcardgame\src\router\index.js                 | JavaScript         |         14 |         11 |          6 |         31 |
+| d:\Documents\GitHub\mtgcardgame\src\router\routes.js                | JavaScript         |         14 |          2 |          4 |         20 |
+| Total                                                               |                    |     11,293 |        211 |        207 |     11,711 |
++---------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

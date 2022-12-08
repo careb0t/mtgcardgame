@@ -1,0 +1,29 @@
+"filename", "language", "JavaScript", "JSON with Comments", "JSON", "HTML", "Vue", "SCSS", "Markdown", "XML", "comment", "blank", "total"
+"d:\Documents\GitHub\mtgcardgame\.eslintrc.js", "JavaScript", 34, 0, 0, 0, 0, 0, 0, 0, 20, 13, 67
+"d:\Documents\GitHub\mtgcardgame\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 30, 0, 0, 12, 42
+"d:\Documents\GitHub\mtgcardgame\index.html", "HTML", 0, 0, 0, 42, 0, 0, 0, 0, 1, 3, 46
+"d:\Documents\GitHub\mtgcardgame\jsconfig.json", "JSON with Comments", 0, 5, 0, 0, 0, 0, 0, 0, 14, 0, 19
+"d:\Documents\GitHub\mtgcardgame\package-lock.json", "JSON", 0, 0, 9737, 0, 0, 0, 0, 0, 0, 1, 9738
+"d:\Documents\GitHub\mtgcardgame\package.json", "JSON", 0, 0, 10, 0, 0, 0, 0, 0, 31, 0, 41
+"d:\Documents\GitHub\mtgcardgame\postcss.config.js", "JavaScript", 16, 0, 0, 0, 0, 0, 0, 0, 9, 3, 28
+"d:\Documents\GitHub\mtgcardgame\quasar.config.js", "JavaScript", 65, 0, 0, 0, 0, 0, 0, 0, 101, 40, 206
+"d:\Documents\GitHub\mtgcardgame\src\App.vue", "Vue", 0, 0, 0, 0, 9, 0, 0, 0, 0, 3, 12
+"d:\Documents\GitHub\mtgcardgame\src\assets\commander_cards.json", "JSON", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Documents\GitHub\mtgcardgame\src\assets\quasar-logo-vertical.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 15
+"d:\Documents\GitHub\mtgcardgame\src\boot\axios.js", "JavaScript", 8, 0, 0, 0, 0, 0, 0, 0, 11, 6, 25
+"d:\Documents\GitHub\mtgcardgame\src\components\CardArt.vue", "Vue", 0, 0, 0, 0, 56, 0, 0, 0, 0, 8, 64
+"d:\Documents\GitHub\mtgcardgame\src\components\ChancesCounter.vue", "Vue", 0, 0, 0, 0, 53, 0, 0, 0, 0, 5, 58
+"d:\Documents\GitHub\mtgcardgame\src\components\GuessTable.vue", "Vue", 0, 0, 0, 0, 277, 0, 0, 0, 0, 24, 301
+"d:\Documents\GitHub\mtgcardgame\src\components\HelpPage.vue", "Vue", 0, 0, 0, 0, 108, 0, 0, 0, 0, 12, 120
+"d:\Documents\GitHub\mtgcardgame\src\components\SearchCard.vue", "Vue", 0, 0, 0, 0, 91, 0, 0, 0, 0, 9, 100
+"d:\Documents\GitHub\mtgcardgame\src\components\SmokeCover.vue", "Vue", 0, 0, 0, 0, 354, 0, 0, 0, 0, 6, 360
+"d:\Documents\GitHub\mtgcardgame\src\components\TibaltTamiyo.vue", "Vue", 0, 0, 0, 0, 18, 0, 0, 0, 0, 1, 19
+"d:\Documents\GitHub\mtgcardgame\src\components\WinLose.vue", "Vue", 0, 0, 0, 0, 95, 0, 0, 0, 0, 10, 105
+"d:\Documents\GitHub\mtgcardgame\src\css\app.scss", "SCSS", 0, 0, 0, 0, 0, 14, 0, 0, 1, 4, 19
+"d:\Documents\GitHub\mtgcardgame\src\css\quasar.variables.scss", "SCSS", 0, 0, 0, 0, 0, 9, 0, 0, 10, 7, 26
+"d:\Documents\GitHub\mtgcardgame\src\layouts\MainLayout.vue", "Vue", 0, 0, 0, 0, 29, 0, 0, 0, 0, 6, 35
+"d:\Documents\GitHub\mtgcardgame\src\pages\ErrorNotFound.vue", "Vue", 0, 0, 0, 0, 27, 0, 0, 0, 0, 5, 32
+"d:\Documents\GitHub\mtgcardgame\src\pages\IndexPage.vue", "Vue", 0, 0, 0, 0, 162, 0, 0, 0, 0, 19, 181
+"d:\Documents\GitHub\mtgcardgame\src\router\index.js", "JavaScript", 14, 0, 0, 0, 0, 0, 0, 0, 11, 6, 31
+"d:\Documents\GitHub\mtgcardgame\src\router\routes.js", "JavaScript", 14, 0, 0, 0, 0, 0, 0, 0, 2, 4, 20
+"Total", "-", 151, 5, 9748, 42, 1279, 23, 30, 15, 211, 207, 11711

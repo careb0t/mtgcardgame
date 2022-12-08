@@ -6,7 +6,7 @@
       hidden: status === 'postgame',
     }"
   >
-    <SmokeCover />
+    <SmokeCover class="smoke-container" />
     <img :src="getImage(answer)" class="wl-card" />
     <h1>You {{ status }}!</h1>
     <h4 @click="copyScore()"><u>Share your score</u></h4>
@@ -100,5 +100,14 @@ h5 {
 
 .wl-card {
   max-height: 45vh;
+}
+
+.smoke-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 </style>

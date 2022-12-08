@@ -1,35 +1,11 @@
 <template>
   <div class="card" :style="{ backgroundImage: `url(${getArt()})` }">
-    <div
-      class="box b1"
-      :class="isHidden(1) ? 'bHidden' : ''"
-      :style="{ backgroundImage: `url(${getArt()})` }"
-    ></div>
-    <div
-      class="box b2"
-      :class="isHidden(2) ? 'bHidden' : ''"
-      :style="{ backgroundImage: `url(${getArt()})` }"
-    ></div>
-    <div
-      class="box b3"
-      :class="isHidden(3) ? 'bHidden' : ''"
-      :style="{ backgroundImage: `url(${getArt()})` }"
-    ></div>
-    <div
-      class="box b4"
-      :class="isHidden(4) ? 'bHidden' : ''"
-      :style="{ backgroundImage: `url(${getArt()})` }"
-    ></div>
-    <div
-      class="box b5"
-      :class="isHidden(5) ? 'bHidden' : ''"
-      :style="{ backgroundImage: `url(${getArt()})` }"
-    ></div>
-    <div
-      class="box b6"
-      :class="isHidden(6) ? 'bHidden' : ''"
-      :style="{ backgroundImage: `url(${getArt()})` }"
-    ></div>
+    <div class="box" :class="isHidden(1) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(2) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(3) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(4) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(5) ? 'bHidden' : ''"></div>
+    <div class="box" :class="isHidden(6) ? 'bHidden' : ''"></div>
   </div>
 </template>
 
@@ -77,33 +53,7 @@ export default defineComponent({
 .box {
   flex: 1 33%;
   opacity: 1;
-  filter: blur(4px);
-  background-size: 312px 229px;
-  background-repeat: no-repeat;
-}
-
-.b1 {
-  background-position: 0 0;
-}
-
-.b2 {
-  background-position: 33% 0;
-}
-
-.b3 {
-  background-position: 66% 0;
-}
-
-.b4 {
-  background-position: 0 50%;
-}
-
-.b5 {
-  background-position: 33% 50%;
-}
-
-.b6 {
-  background-position: 66% 50%;
+  background-color: black;
 }
 
 .bHidden {
