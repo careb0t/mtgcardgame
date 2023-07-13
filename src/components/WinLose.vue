@@ -76,7 +76,6 @@ h5 {
 
 .spotlight-bg {
   position: fixed;
-  display: none;
   top: 0;
   left: 0;
   height: 100%;

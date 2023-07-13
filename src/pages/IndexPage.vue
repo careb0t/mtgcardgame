@@ -105,20 +105,24 @@ export default defineComponent({
 
       makeG(card) {
         guesses.value.push(card);
+        console.log("Guess made!:" + guesses.value);
       },
 
       updateC(num) {
         chances.value = num;
+        console.log("Updated chances!:" + chances.value);
       },
 
       updateS(str) {
         status.value = str;
 
         hiddenTiles.value = [1, 2, 3, 4, 5, 6];
+        console.log("Status updated!: " + status.value);
       },
 
       updateT(num) {
         hiddenTiles.value.push(num);
+        console.log("Tiles updated!: " + hiddenTiles.value);
       },
 
       introFinished() {

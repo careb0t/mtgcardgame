@@ -50,7 +50,7 @@ export default defineComponent({
   margin: 0px 10px;
 }
 
-.energy-counter.red-energy {
+.red-energy {
   filter: invert(18%) sepia(84%) saturate(7087%) hue-rotate(358deg)
     brightness(88%) contrast(131%);
 }

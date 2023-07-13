@@ -1,46 +1,49 @@
 <template>
-  <q-icon
-    name="help_outline"
-    size="md"
-    class="help-button"
-    color="white"
-    @click="toggleHelp()"
-  />
-  <div
-    class="help-screen flex flex-center column beleren"
-    :class="{ darken: helpMenuOpen == true }"
-    @click="toggleHelp()"
-  >
-    <h4>Welcome to Comandle</h4>
-    <div class="rules-card flex flex-center">
-      <p>
-        Every day a new Commander is chosen at random from the list of all
-        Commander format legal cards. The goal of the game is to guess the
-        correct Commander.
-      </p>
-      <p>
-        You have five guesses per day to guess the correct card. The energy
-        counters represent your remaining guesses. If you make an incorrect
-        guess, one will turn <span class="red-help">red</span>.
-      </p>
-      <img class="help-energy" src="../assets/help1.png" />
-      <p>
-        Each incorrect guess will give you hints about what your guess shares in
-        common with the Commander of the day.
-        <span class="red-help">Red</span> means that your guess does not match
-        the same category for the answer card at all.
-        <span class="yellow-help">Yellow</span> means that your guess partially
-        matches the same category for the answer card. You are getting close!
-        <span class="green-help">Green</span> means your guess is an exact match
-        to the answer card for that category. Well done!
-      </p>
-      <img class="help-guess" src="../assets/help2.png" />
-      <p>
-        In the example above, "Brims" Barone, Midway Mobster is an incorrect
-        guess. It is revealed that the color identity and subtypes for this card
-        are a partial match to the correct Commander, while the toughness is an
-        exact match, and the converted mana cost and power are not matches.
-      </p>
+  <div>
+    <q-icon
+      name="help_outline"
+      size="md"
+      class="help-button"
+      color="white"
+      @click="toggleHelp()"
+    />
+    <div
+      class="help-screen flex flex-center column beleren"
+      :class="{ darken: helpMenuOpen == true }"
+      @click="toggleHelp()"
+    >
+      <h4>Welcome to Comandle</h4>
+      <div class="rules-card flex flex-center">
+        <p>
+          Every day a new Commander is chosen at random from the list of all
+          Commander format legal cards. The goal of the game is to guess the
+          correct Commander.
+        </p>
+        <p>
+          You have five guesses per day to guess the correct card. The energy
+          counters represent your remaining guesses. If you make an incorrect
+          guess, one will turn <span class="red-help">red</span>.
+        </p>
+        <img class="help-energy" src="../assets/help1.png" />
+        <p>
+          Each incorrect guess will give you hints about what your guess shares
+          in common with the Commander of the day.
+          <span class="red-help">Red</span> means that your guess does not match
+          the same category for the answer card at all.
+          <span class="yellow-help">Yellow</span> means that your guess
+          partially matches the same category for the answer card. You are
+          getting close! <span class="green-help">Green</span> means your guess
+          is an exact match to the answer card for that category. Well done!
+        </p>
+        <img class="help-guess" src="../assets/help2.png" />
+        <p>
+          In the example above, "Brims" Barone, Midway Mobster is an incorrect
+          guess. It is revealed that the color identity and subtypes for this
+          card are a partial match to the correct Commander, while the toughness
+          is an exact match, and the converted mana cost and power are not
+          matches.
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -56,6 +59,7 @@ export default defineComponent({
       helpMenuOpen,
 
       toggleHelp() {
+        console.log("Toggling Help!");
         helpMenuOpen.value = !helpMenuOpen.value;
       },
     };
@@ -75,7 +79,6 @@ export default defineComponent({
   left: 0;
   height: 100%;
   width: 100%;
-  display: none;
   z-index: -1;
   color: white;
   background-color: black;
